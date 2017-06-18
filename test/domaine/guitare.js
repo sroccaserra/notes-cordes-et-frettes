@@ -39,3 +39,22 @@ describe('La première corde', () => {
             .should.be.true
     })
 })
+
+describe('La deuxième corde', () => {
+    let cordeSi
+
+    beforeEach(() => {
+        const guitare = new Guitare()
+        cordeSi = guitare.corde(2)
+    })
+
+    it('commence par Si', () => {
+        cordeSi.testeLaCase(0, Notes.SI)
+            .should.be.true
+    })
+
+    it('continue par Do', () => {
+        cordeSi.testeLaCase(1, Notes.DO)
+            .should.be.true
+    })
+})

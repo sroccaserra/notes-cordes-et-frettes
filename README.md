@@ -90,3 +90,10 @@ Une guitare a 6 cordes, du plus grave au plus aiguë :
 Dans les notations standard, la corde Mi aiguë est numérotée 1, et ainsi de
 suite jusqu'à la corde de Mi grave qui est numérotée 6.
 
+
+## Lancer les tests
+
+Exemple avec un watcher :
+
+    $ npm t -- --bail --reporter=min --watch
+

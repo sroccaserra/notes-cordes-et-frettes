@@ -2,13 +2,17 @@ const {Notes} = require('./notes')
 
 const NOMBRE_DE_SONS = 12
 
+const accordage = [Notes.MI, Notes.SI]
+
 class Guitare {
-    corde() {
+    corde(numeroDeCorde) {
+        const noteDeDepart = accordage[numeroDeCorde - 1]
+
         return {
             testeLaCase: (numeroDeCase, note) => {
-                return numeroDeCase % NOMBRE_DE_SONS === note.position
+                return (noteDeDepart.position + numeroDeCase) % NOMBRE_DE_SONS === note.position
             }
-        } 
+        }
     }
 }
 
