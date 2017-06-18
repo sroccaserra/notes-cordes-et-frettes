@@ -59,7 +59,7 @@ describe('La deuxième corde', () => {
     })
 })
 
-describe('Les cordes suivantes sont', () => {
+describe('Les cordes suivantes sont :', () => {
     let guitare
 
     beforeEach(() => {

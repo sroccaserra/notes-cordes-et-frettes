@@ -24,6 +24,14 @@ class Guitare {
             }
         }
     }
+
+    cordes() {
+        const resultat = []
+        for (let i = NOMBRE_DE_CORDES; i >= 1; i--) {
+            resultat.push(this.corde(i))
+        }
+        return resultat
+    }
 }
 
 module.exports = {
