@@ -27,7 +27,7 @@ class Afficheur {
         const caseAvecNote = this.note.nom + '  '
         const caseVide = numeroDeCase === 0 ? CORDE_A_VIDE : CASE_VIDE
 
-        const cordes = new Guitare().cordes()
+        const cordes = Guitare.cordes()
         const cases = cordes.map(corde => {
             if (corde.testeLaCase(numeroDeCase, this.note)) {
                 return caseAvecNote

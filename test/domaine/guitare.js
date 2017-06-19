@@ -5,8 +5,7 @@ describe('La première corde', () => {
     let cordeDeMiAigue
 
     beforeEach(() => {
-        const guitare = new Guitare()
-        cordeDeMiAigue = guitare.corde(1)
+        cordeDeMiAigue = Guitare.corde(1)
     })
 
     it('commence par Mi', () => {
@@ -44,8 +43,7 @@ describe('La deuxième corde', () => {
     let cordeDeSi
 
     beforeEach(() => {
-        const guitare = new Guitare()
-        cordeDeSi = guitare.corde(2)
+        cordeDeSi = Guitare.corde(2)
     })
 
     it('commence par Si', () => {
@@ -65,32 +63,26 @@ describe('La deuxième corde', () => {
 })
 
 describe('Les cordes suivantes sont :', () => {
-    let guitare
-
-    beforeEach(() => {
-        guitare = new Guitare()
-    })
-
     it('Sol', () => {
-        const cordeDeSol = guitare.corde(3)
+        const cordeDeSol = Guitare.corde(3)
         cordeDeSol.testeLaCase(0, Notes.SOL)
             .should.be.true
     })
 
     it('Ré', () => {
-        const cordeDeRe = guitare.corde(4)
+        const cordeDeRe = Guitare.corde(4)
         cordeDeRe.testeLaCase(0, Notes.RE)
             .should.be.true
     })
 
     it('La', () => {
-        const cordeDeLa = guitare.corde(5)
+        const cordeDeLa = Guitare.corde(5)
         cordeDeLa.testeLaCase(0, Notes.LA)
             .should.be.true
     })
 
     it('Mi', () => {
-        const cordeDeMiGrave = guitare.corde(6)
+        const cordeDeMiGrave = Guitare.corde(6)
         cordeDeMiGrave.testeLaCase(0, Notes.MI)
             .should.be.true
     })

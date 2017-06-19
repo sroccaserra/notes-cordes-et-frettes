@@ -21,6 +21,7 @@ describe('L\'afficheur', () => {
                 .should.equal('Fa  |   |   |   |   Fa  ')
         })
     })
+
     context('Les frettes (lignes impaires)', () => {
         it('Montre la frette 0', () => {
             const afficheur = new Afficheur(Notes.MI)

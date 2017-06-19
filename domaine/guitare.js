@@ -12,7 +12,7 @@ const ACCORDAGE = [
     Notes.MI
 ]
 
-class Guitare {
+const Guitare = {
     corde(numeroDeCorde) {
         const noteDeDepart = ACCORDAGE[NOMBRE_DE_CORDES - numeroDeCorde]
 
@@ -23,7 +23,7 @@ class Guitare {
                 return noteDeLaCase === note.position
             }
         }
-    }
+    },
 
     cordes() {
         const resultat = []
