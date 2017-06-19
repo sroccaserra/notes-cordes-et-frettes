@@ -5,7 +5,7 @@ const FRETTE = '---------------------   '
 const CORDE_A_VIDE = '    '
 const CASE_VIDE = '|   '
 
-class Afficheur {
+class Textifieur {
     constructor(noteAAfficher) {
         this.note = noteAAfficher
     }
@@ -40,6 +40,6 @@ class Afficheur {
 }
 
 module.exports = {
-    Afficheur
+    Textifieur
 }
 
