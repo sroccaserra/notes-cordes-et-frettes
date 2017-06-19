@@ -1,4 +1,4 @@
-const {Textifieur} = require('../../domaine/textifieur')
+const {Textifieur, ajusteAvecEspaces} = require('../../domaine/textifieur')
 const {Notes} = require('../../domaine/notes')
 
 describe('Le Textifieur', () => {
@@ -19,6 +19,12 @@ describe('Le Textifieur', () => {
             const textifieur = new Textifieur(Notes.FA)
             textifieur.ligne(2)
                 .should.equal('Fa  |   |   |   |   Fa  ')
+        })
+
+        it('Montre Fa♯ en ligne 4', () => {
+            const textifieur = new Textifieur(Notes.FAd)
+            textifieur.ligne(4)
+                .should.equal('Fa♯ |   |   |   |   Fa♯ ')
         })
     })
 
@@ -69,5 +75,22 @@ describe('Le Textifieur', () => {
                     '---------------------   '
                 ])
         })
+    })
+})
+
+describe('L\'ajustement', () => {
+    it('ajoute deux espaces pour Mi', () => {
+        ajusteAvecEspaces('Mi')
+            .should.equal('Mi  ')
+    })
+
+    it('ajoute un espace pour Sol', () => {
+        ajusteAvecEspaces('Sol')
+            .should.equal('Sol ')
+    })
+
+    it('n\'ajoute pas d\'espace pour Sol♯', () => {
+        ajusteAvecEspaces('Sol♯')
+            .should.equal('Sol♯')
     })
 })

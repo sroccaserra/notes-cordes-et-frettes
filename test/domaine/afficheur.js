@@ -5,16 +5,16 @@ const {Notes} = require('../../domaine/notes')
 
 describe('L\'afficheur', () => {
     let loggeur
+    let afficheur
 
     beforeEach(() => {
         loggeur = {
             log: spy()
         }
+        afficheur = new Afficheur(loggeur, Notes.MI)
     })
 
     it('affiche la case 0', () => {
-        // Étant donné
-        const afficheur = new Afficheur(loggeur, Notes.MI)
         // Quand
         afficheur.log()
         // Alors
@@ -22,8 +22,6 @@ describe('L\'afficheur', () => {
     })
 
     it('affiche la case 12', () => {
-        // Étant donné
-        const afficheur = new Afficheur(loggeur, Notes.MI)
         // Quand
         afficheur.log()
         // Alors

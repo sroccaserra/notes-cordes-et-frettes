@@ -25,7 +25,7 @@ class Textifieur {
     }
 
     cases(numeroDeCase) {
-        const caseAvecNote = this.note.nom + '  '
+        const caseAvecNote = ajusteAvecEspaces(this.note.nom)
         const caseVide = numeroDeCase === 0 ? CORDE_A_VIDE : CASE_VIDE
 
         const cordes = Guitare.cordes()
@@ -48,7 +48,12 @@ class Textifieur {
     }
 }
 
+function ajusteAvecEspaces(nomDeNote) {
+    return nomDeNote + '  '.slice(nomDeNote.length-2)
+}
+
 module.exports = {
-    Textifieur
+    Textifieur,
+    ajusteAvecEspaces
 }
 
