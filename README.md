@@ -98,3 +98,8 @@ afficher par ligne : il faut alors s'adapter.
 
 Avec une basse : moins de temps à compter ?
 
+## Extensions possibles
+
+- Changer d'accordage
+- Afficher un Ukulélé
+- Montrer plusieurs notes à la fois
