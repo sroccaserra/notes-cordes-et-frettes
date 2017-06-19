@@ -18,8 +18,8 @@ class Guitare {
 
         return {
             testeLaCase: (numeroDeCase, note) => {
-                const noteDeLaCase = (noteDeDepart.position + numeroDeCase)
-                    % NOMBRE_DE_SONS
+                const noteDeLaCase = (noteDeDepart.position + numeroDeCase) %
+                    NOMBRE_DE_SONS
                 return noteDeLaCase === note.position
             }
         }

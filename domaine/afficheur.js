@@ -1,7 +1,7 @@
 const {Guitare} = require('./guitare')
 
 const FRETTE_ZERO = '=====================   '
-const FRETTE =  '---------------------   '
+const FRETTE = '---------------------   '
 const CORDE_A_VIDE = '    '
 const CASE_VIDE = '|   '
 
@@ -15,7 +15,7 @@ class Afficheur {
             return FRETTE_ZERO
         }
 
-        if (1 === numeroDeLigne % 2) {
+        if (numeroDeLigne % 2 === 1) {
             return FRETTE
         }
 

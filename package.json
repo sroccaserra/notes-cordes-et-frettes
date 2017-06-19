@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "test": "mocha --colors --require=./test/harness --recursive",
-    "lint": "eslint test domain"
+    "lint": "eslint test domaine"
   },
   "keywords": [],
   "author": "",

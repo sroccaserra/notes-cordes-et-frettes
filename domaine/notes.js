@@ -1,6 +1,6 @@
 // Note : FAd = Fa♯ = "Fa dièse", etc.
 
-Notes = {
+const Notes = {
     MI: {position: 0, nom: 'Mi'},
     FA: {position: 1, nom: 'Fa'},
     FAd: {position: 2, nom: 'Fa♯'},
