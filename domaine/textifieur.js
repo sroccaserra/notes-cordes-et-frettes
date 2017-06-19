@@ -49,7 +49,7 @@ class Textifieur {
 }
 
 function ajusteAvecEspaces(nomDeNote) {
-    return nomDeNote + '  '.slice(nomDeNote.length-2)
+    return nomDeNote + '  '.slice(nomDeNote.length - 2)
 }
 
 module.exports = {

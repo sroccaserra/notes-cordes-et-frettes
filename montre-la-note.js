@@ -11,7 +11,6 @@ function main() {
     }
 
     const afficheur = new Afficheur(console, note)
-
     afficheur.log()
 }
 
