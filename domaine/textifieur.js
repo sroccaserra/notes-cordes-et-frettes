@@ -4,6 +4,7 @@ const FRETTE_ZERO = '=====================   '
 const FRETTE = '---------------------   '
 const CORDE_A_VIDE = '    '
 const CASE_VIDE = '|   '
+const NOMBRE_DE_LIGNES = 25
 
 class Textifieur {
     constructor(noteAAfficher) {
@@ -36,6 +37,14 @@ class Textifieur {
         })
 
         return cases.join('')
+    }
+
+    lignes() {
+        const resultat = []
+        for (let i = 0; i <= NOMBRE_DE_LIGNES; ++i) {
+            resultat.push(this.ligne(i))
+        }
+        return resultat
     }
 }
 
