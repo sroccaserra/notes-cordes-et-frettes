@@ -57,6 +57,11 @@ describe('La deuxième corde', () => {
         cordeDeSi.testeLaCase(1, Notes.DO)
             .should.be.true
     })
+
+    it('donne Ré♯ à la case 4', () => {
+        cordeDeSi.testeLaCase(4, Notes.REd)
+            .should.be.true
+    })
 })
 
 describe('Les cordes suivantes sont :', () => {

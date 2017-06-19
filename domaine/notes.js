@@ -12,7 +12,7 @@ Notes = {
     DO: {position: 8, nom: 'Do'},
     DOd: {position: 9, nom: 'Do♯'},
     RE: {position: 10, nom: 'Ré'},
-    REd: {position: 1, nom: 'Ré♯'}
+    REd: {position: 11, nom: 'Ré♯'}
 }
 
 module.exports = {
