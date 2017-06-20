@@ -1,18 +1,18 @@
 // Note : FAd = Fa♯ = "Fa dièse", etc.
 
 const Notes = {
-    MI: {position: 0, nom: 'Mi'},
-    FA: {position: 1, nom: 'Fa'},
-    FAd: {position: 2, nom: 'Fa♯'},
-    SOL: {position: 3, nom: 'Sol'},
-    SOLd: {position: 4, nom: 'Sol♯'},
-    LA: {position: 5, nom: 'La'},
-    LAd: {position: 6, nom: 'La♯'},
-    SI: {position: 7, nom: 'Si'},
-    DO: {position: 8, nom: 'Do'},
-    DOd: {position: 9, nom: 'Do♯'},
-    RE: {position: 10, nom: 'Ré'},
-    REd: {position: 11, nom: 'Ré♯'}
+    MI: {index: 0, nom: 'Mi'},
+    FA: {index: 1, nom: 'Fa'},
+    FAd: {index: 2, nom: 'Fa♯'},
+    SOL: {index: 3, nom: 'Sol'},
+    SOLd: {index: 4, nom: 'Sol♯'},
+    LA: {index: 5, nom: 'La'},
+    LAd: {index: 6, nom: 'La♯'},
+    SI: {index: 7, nom: 'Si'},
+    DO: {index: 8, nom: 'Do'},
+    DOd: {index: 9, nom: 'Do♯'},
+    RE: {index: 10, nom: 'Ré'},
+    REd: {index: 11, nom: 'Ré♯'}
 }
 
 module.exports = {

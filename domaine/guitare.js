@@ -13,10 +13,13 @@ const ACCORDAGE = [
 ]
 
 function testeLaCase(numeroDeCorde, numeroDeCase, note) {
-    const noteDeDepart = ACCORDAGE[NOMBRE_DE_CORDES - numeroDeCorde]
-    const noteDeLaCase = (noteDeDepart.position + numeroDeCase) %
-        NOMBRE_DE_SONS
-    return noteDeLaCase === note.position
+    const indexDeLaNoteAVide =
+        ACCORDAGE[NOMBRE_DE_CORDES - numeroDeCorde].index
+
+    const indexDeLaNoteDeLaCase =
+        (indexDeLaNoteAVide + numeroDeCase) % NOMBRE_DE_SONS
+
+    return indexDeLaNoteDeLaCase === note.index
 }
 
 function corde(numeroDeCorde) {
