@@ -1,11 +1,11 @@
-const {Guitare} = require('../../domaine/guitare')
-const {Notes} = require('../../domaine/notes')
+const {corde} = require('../domaine/guitare')
+const {Notes} = require('../domaine/notes')
 
 describe('La première corde', () => {
     let cordeDeMiAigue
 
     beforeEach(() => {
-        cordeDeMiAigue = Guitare.corde(1)
+        cordeDeMiAigue = corde(1)
     })
 
     it('commence par Mi', () => {
@@ -43,7 +43,7 @@ describe('La deuxième corde', () => {
     let cordeDeSi
 
     beforeEach(() => {
-        cordeDeSi = Guitare.corde(2)
+        cordeDeSi = corde(2)
     })
 
     it('commence par Si', () => {
@@ -64,25 +64,25 @@ describe('La deuxième corde', () => {
 
 describe('Les cordes suivantes sont :', () => {
     it('Sol', () => {
-        const cordeDeSol = Guitare.corde(3)
+        const cordeDeSol = corde(3)
         cordeDeSol.testeLaCase(0, Notes.SOL)
             .should.be.true
     })
 
     it('Ré', () => {
-        const cordeDeRe = Guitare.corde(4)
+        const cordeDeRe = corde(4)
         cordeDeRe.testeLaCase(0, Notes.RE)
             .should.be.true
     })
 
     it('La', () => {
-        const cordeDeLa = Guitare.corde(5)
+        const cordeDeLa = corde(5)
         cordeDeLa.testeLaCase(0, Notes.LA)
             .should.be.true
     })
 
     it('Mi', () => {
-        const cordeDeMiGrave = Guitare.corde(6)
+        const cordeDeMiGrave = corde(6)
         cordeDeMiGrave.testeLaCase(0, Notes.MI)
             .should.be.true
     })

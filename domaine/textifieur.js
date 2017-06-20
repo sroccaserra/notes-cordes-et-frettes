@@ -1,4 +1,4 @@
-const {Guitare} = require('./guitare')
+const {cordes} = require('./guitare')
 
 const FRETTE_ZERO = '=====================   '
 const FRETTE = '---------------------   '
@@ -28,8 +28,7 @@ class Textifieur {
         const caseAvecNote = ajusteAvecEspaces(this.note.nom)
         const caseVide = numeroDeCase === 0 ? CORDE_A_VIDE : CASE_VIDE
 
-        const cordes = Guitare.cordes()
-        const cases = cordes.map(corde => {
+        const cases = cordes().map(corde => {
             if (corde.testeLaCase(numeroDeCase, this.note)) {
                 return caseAvecNote
             }

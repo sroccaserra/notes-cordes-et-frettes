@@ -1,5 +1,5 @@
-const {Textifieur, ajusteAvecEspaces} = require('../../domaine/textifieur')
-const {Notes} = require('../../domaine/notes')
+const {Textifieur, ajusteAvecEspaces} = require('../domaine/textifieur')
+const {Notes} = require('../domaine/notes')
 
 describe('Le Textifieur', () => {
     context('Les cases (lignes paires)', () => {

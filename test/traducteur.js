@@ -1,5 +1,5 @@
-const {traduit} = require('../../domaine/traducteur')
-const {Notes} = require('../../domaine/notes')
+const {traduit} = require('../domaine/traducteur')
+const {Notes} = require('../domaine/notes')
 
 describe('Le traducteur', () => {
     it('Renvoie la note MI pour la chaine "Mi"', () => {

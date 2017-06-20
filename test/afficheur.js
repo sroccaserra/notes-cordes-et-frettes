@@ -1,7 +1,7 @@
 const {assert, spy} = require('sinon')
 
-const {Afficheur} = require('../../domaine/afficheur')
-const {Notes} = require('../../domaine/notes')
+const {Afficheur} = require('../domaine/afficheur')
+const {Notes} = require('../domaine/notes')
 
 describe('L\'afficheur', () => {
     let loggeur
