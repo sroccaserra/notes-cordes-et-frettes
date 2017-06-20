@@ -12,15 +12,16 @@ const ACCORDAGE = [
     Notes.MI
 ]
 
-function corde(numeroDeCorde) {
+function testeLaCase(numeroDeCorde, numeroDeCase, note) {
     const noteDeDepart = ACCORDAGE[NOMBRE_DE_CORDES - numeroDeCorde]
+    const noteDeLaCase = (noteDeDepart.position + numeroDeCase) %
+        NOMBRE_DE_SONS
+    return noteDeLaCase === note.position
+}
 
+function corde(numeroDeCorde) {
     return {
-        testeLaCase: (numeroDeCase, note) => {
-            const noteDeLaCase = (noteDeDepart.position + numeroDeCase) %
-                NOMBRE_DE_SONS
-            return noteDeLaCase === note.position
-        }
+        testeLaCase: testeLaCase.bind(null, numeroDeCorde)
     }
 }
 
