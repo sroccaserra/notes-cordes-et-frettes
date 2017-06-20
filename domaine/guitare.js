@@ -1,7 +1,6 @@
 const {Notes} = require('./notes')
 
 const NOMBRE_DE_SONS = 12
-const NOMBRE_DE_CORDES = 6
 
 const ACCORDAGE = [
     Notes.MI,
@@ -11,6 +10,8 @@ const ACCORDAGE = [
     Notes.SI,
     Notes.MI
 ]
+
+const NOMBRE_DE_CORDES = ACCORDAGE.length
 
 function testeLaCase(numeroDeCorde, numeroDeCase, note) {
     const indexDeLaNoteAVide =
