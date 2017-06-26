@@ -1,19 +1,14 @@
 const {Textifieur} = require('./Textifieur')
 
-class Afficheur {
-    constructor(loggeur, note) {
-        this.loggeur = loggeur
-        this.note = note
-    }
-
-    log() {
-        const textifieur = new Textifieur(this.note)
+function creeAfficheur(loggeur, note) {
+    return function() {
+        const textifieur = new Textifieur(note)
         textifieur.lignes().forEach((ligne) => {
-            this.loggeur.log(ligne)
+            loggeur.log(ligne)
         })
     }
 }
 
 module.exports = {
-    Afficheur
+    creeAfficheur
 }

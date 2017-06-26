@@ -1,29 +1,29 @@
 const {assert, spy} = require('sinon')
 
-const {Afficheur} = require('../domaine/afficheur')
+const {creeAfficheur} = require('../domaine/afficheur')
 const {Notes} = require('../domaine/notes')
 
 describe('L\'afficheur', () => {
     let loggeur
-    let afficheur
+    let afficheLaNoteMi
 
     beforeEach(() => {
         loggeur = {
             log: spy()
         }
-        afficheur = new Afficheur(loggeur, Notes.MI)
+        afficheLaNoteMi = creeAfficheur(loggeur, Notes.MI)
     })
 
     it('affiche la case 0', () => {
         // Quand
-        afficheur.log()
+        afficheLaNoteMi()
         // Alors
         assert.calledWith(loggeur.log, 'Mi                  Mi  ')
     })
 
     it('affiche la case 12', () => {
         // Quand
-        afficheur.log()
+        afficheLaNoteMi()
         // Alors
         assert.calledWith(loggeur.log, 'Mi  |   |   |   |   Mi  ')
     })
